@@ -9,7 +9,9 @@ This project is a demonstration of building a REST API using Node.js and Express
 To get started with this project, follow these steps:
 
 Clone the repository to your local machine.
+
 Install dependencies by running ```bash npm install```.
+
 Start the server by running ```bash npm start```.
 
 # Usage
