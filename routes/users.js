@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const router = express.Router();
 
-const users = [];
+let users = [];
 
 // All routes in here are starting with /users
 router.get('/', (req, res) => {
@@ -31,6 +31,19 @@ router.get('/:id', (req, res) => {
   const foundUser = users.find((user) => user.id === id);
 
   res.send(foundUser);
+});
+
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+
+  // id to delete 123
+
+  // John 123
+  // Jane 321
+
+  users = users.filter((user) => user.id !== id);
+
+  res.send(`User with the id ${id} deleted from the database`);
 });
 
 export default router;
